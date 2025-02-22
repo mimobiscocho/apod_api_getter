@@ -7,7 +7,7 @@ from datetime import datetime
 url = "https://api.nasa.gov/planetary/apod"
 api_key = "DEMO_KEY"
 
-date_input = input("Donnez une date (dd-mm-yyyy) : \n").strip()
+date_input = input("Donnez une date (dd-mm-yyyy) :").strip()
 date = None
 
 if date_input:
@@ -29,7 +29,7 @@ if response.status_code == 200:
     data = response.json()
     hdurl = data.get("hdurl")
 
-    phrase = f"Téléchargement de l'image :, {hdurl} \n"
+    phrase = f" \nTéléchargement de l'image :, {hdurl} \n"
     print(phrase)
 
     if hdurl:
